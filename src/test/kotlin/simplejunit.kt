@@ -1,13 +1,14 @@
-import org.assertj.core.api.Assertions.assertThat
-import org.junit.jupiter.api.Assertions
+import org.assertj.core.api.AssertionsForClassTypes.assertThat
+import org.assertj.core.api.AssertionsForClassTypes.within
+
 import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 
 class simplejunit {
     @Test
     internal fun function0() {
-        Assertions.assertEquals(10,10)
 
+        assertThat(10.0).isCloseTo(9.09, within(0.1))
     }
 
     @Disabled("Test jeszcze nie został zaimpementowany")
@@ -15,4 +16,6 @@ class simplejunit {
     internal fun function1() {
         assert(true)
     }
+
+    //exp(x)^2-sin(x) dla x = 1
 }
